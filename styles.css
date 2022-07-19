@@ -1,0 +1,216 @@
+:root {
+    /* Primary */
+    --background: hsl(30, 38%, 92%);
+    --dark-cyan: hsl(158, 36%, 37%);
+    --darker-cyan: hsl(156, 42%, 18%);
+    
+
+    /* Neutral */
+    --very-dark-blue: hsl(212, 21%, 14%);
+    --dark-grayish-blue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%; 
+}
+
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    background-color: var(--background);
+    font-size: 1.4rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+
+/* ---------------- Card -------------- */
+
+.card-section {
+    max-width: 144rem;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.card {
+    max-width: 70rem;
+    height: 50rem;
+    /* position: relative; */
+    margin: 12rem auto;
+    display: flex;
+    
+    background-color: var(--white);
+    border-radius: 1rem;
+    overflow: hidden;
+    /* justify-content: center; */
+    
+}
+
+/* ---------------- Image -------------- */
+
+.img-half {
+    width: 50%;
+    overflow: hidden;
+    background-image: url("/images/image-product-desktop.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* .card-image {
+    max-height: 20rem;
+    display: inline-block;
+    max-height: 51rem;
+    object-fit: cover;
+} */
+
+
+
+/* ---------------- Product -------------- */
+
+.product {
+    max-width: 50%;
+    padding: 4rem;
+}
+
+.perfume {
+    text-transform: uppercase;
+    letter-spacing: 0.4rem;
+    margin-bottom: 2.5rem;
+    display: block;
+}
+
+.perfume, 
+.card-description,
+.price-old {
+    color: var(--dark-grayish-blue);
+}
+
+.card-title {
+    font-family: "Fraunces", serif;
+    font-size: 3.4rem;
+    line-height: 1.1;
+    margin-bottom: 2.5rem;
+}
+
+.prices {
+    display: flex;
+    margin: clamp(2.5rem, 2.5vw, 3rem) 0;
+    /* justify-content: flex-start; */
+    align-items: center;
+}
+
+.price {
+    width: 50%;
+    /* font-size: 3.4rem; */
+    font-size: clamp(2.5rem, 2.5vw, 4rem);
+    font-family: "Fraunces", serif;
+    color: var(--dark-cyan);
+
+}
+
+.price-old {
+    width: 100%;
+    text-align: center;
+    text-decoration: line-through;
+}
+
+/* #btn-add {
+    display: flex;
+    background-color: var(--dark-cyan);
+    color: var(--white);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    border-style: none;
+    width: 100%;
+    padding: 1.5rem 0;
+    border-radius: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+#btn-add-icon: {
+    
+    margin-right: 1rem;
+
+} */
+
+
+.btn-add:link,
+.btn-add:visited {
+    display: flex;
+    background-color: var(--dark-cyan);
+    color: var(--white);
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    width: 100%;
+    padding: 1.5rem 0;
+    border-radius: 1rem;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    transition: all 0.3s;
+}
+
+.btn-add:hover,
+.btn-add:active {
+    background-color: var(--darker-cyan);
+}
+
+
+
+/* https://freefrontend.com/css-product-cards/ */
+
+
+/* ---------------- Attribution -------------- */
+.attr-container {
+    margin: 0 auto;
+    padding: 0 2rem;
+    max-width: 144rem;
+}
+.attribution { font-size: 11px; text-align: center;}
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
+
+@media screen and (max-width: 38.5em){
+    .card {
+        margin: 2rem 0;
+        flex-direction: column;
+        align-items: stretch;
+        overflow: hidden;
+        height: 72rem;
+    }
+
+    .card-title {
+        margin-bottom: 1.5rem;
+    }
+
+    /* ---------------- Image -------------- */
+
+    .img-half {
+        width: 100%;
+        height: 50%;
+        background-image: url("/images/image-product-mobile.jpg");
+        background-position: top center;
+        overflow: hidden;
+        margin-bottom: 0;
+    }
+
+    .product {
+        max-width: 100%;
+        padding: 2rem;
+    }
+
+
+}
